@@ -1,0 +1,75 @@
+@media (max-width: 1600px) {
+    .card {
+        max-width: 1300px;
+    }
+    
+    .register_panel {
+        padding: 12px 80px;
+    }
+}
+
+@media (max-width: 1300px) {
+    .card {
+        max-width: 1000px;
+    }
+
+    .register_panel {
+        padding: 10px 72px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .card {
+        max-width: 800px;
+    }
+
+    .register_panel {
+        width: 65%;
+        padding: 8px 54px;
+    }
+
+    .slider_wrapper {
+        width: 35%;
+    }
+}
+
+@media (max-width: 800px) {
+    .logo {
+        height: 64px;
+        margin-top: 0;
+    }
+
+    .logo .logo_img {
+        height: 64px;
+    }
+
+    .card {
+        max-width: 480px;
+        font-size: 14px;
+    }
+
+    .register_panel {
+        padding: 6px 40px;
+        width: 100%;
+    }
+
+    .slider_wrapper {
+        width: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        min-width: 320px;
+        font-size: 12px;
+    }
+
+    .register_panel {
+        padding: 4px 20px;
+        width: 100%;
+    }
+
+    .slider_wrapper {
+        display: none;
+    }
+}

@@ -1,0 +1,234 @@
+body {
+    height: 100%;
+    min-width: 320px;
+    background: linear-gradient(to left,#2193b0,#6dd5ed);
+}
+
+a, a:visited {
+    color: #666;
+}
+
+a:focus, a:hover {
+    color: #333;
+}
+
+.logo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    height: 128px;
+    line-height: 128px;
+    margin-left: 30px;
+    margin-top: 18px;
+    font-size: 36px;
+    display: block;
+    color: #000;
+}
+
+.logo .logo_img {
+    height: 128px;
+}
+
+.wrapper {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    display: flex;
+    width: 66%;
+    border-radius: 16px;
+    box-shadow: 0 4px 32px 0 rgba(10, 14, 29, .02), 0 8px 64px 0 rgba(10, 14, 29, .08);
+    overflow: hidden;
+    background-color: white;
+}
+
+.slider_wrapper {
+    width: 50%;
+    transition: width 0.3s ease;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+.side_slider {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    background-color: #ccc;
+}
+
+.side_slider .slider_item {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.side_slider .slider_item.show {
+    opacity: 1;
+}
+
+.side_slider .slider_item .slider_img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.register_panel {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 20px 90px;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+.page_title {
+    font-size: 28px;
+    font-weight: normal;
+    transition: font-size 0.3s ease;
+    margin: 12px 0;
+}
+
+.page_second_title {
+    font-size: 18px;
+    font-weight: normal;
+    color: #333;
+    transition: font-size 0.3s ease;
+    margin: 6px 0;
+}
+
+.label {
+    position: relative;
+    display: block;
+    margin: 32px 0 24px 0;
+    line-height: 40px;
+    height: 40px;
+    user-select: none;
+}
+
+.label.securityCode_label {
+    margin-bottom: 16px;
+}
+
+.inline_text {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    padding-left: 0.5em;
+    transition: transform 0.3s cubic-bezier(0.4,0,0.2,1), color 0.3s ease;
+    line-height: 32px;
+    height: 32px;
+}
+
+.inline_text .text_icon {
+    height: 50%;
+    margin-right: 0.25em;
+}
+
+.inline_text.active {
+    transform: translateY(-60%) !important;
+}
+
+.input {
+    height: 32px;
+    width: 100%;
+    padding: 0.5em 0.5em;
+    border-radius: 0;
+    border: 0;
+    border-bottom: 2px solid #666;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+    outline: none;
+}
+
+.input:focus {
+    border-color: #71c9ce;
+}
+.input + .inline_text {
+    transform: translateY(-60%);
+}
+
+.input:invalid + .inline_text {
+    transform: translateY(0);
+}
+
+.input:focus + .inline_text {
+    transform: translateY(-60%);
+    color: #71c9ce;
+}
+
+.input:invalid:focus + .inline_text {
+    transform: translateY(-60%);
+    color: #71c9ce;
+}
+
+
+.submit_btn {
+    color: white;
+    width: 100%;
+    height: 40px;
+    margin: 10px 0;
+    background-color: #71C9CE;
+    border-radius: 4px;
+    border: 1px #71C9CE solid;
+    box-shadow: 0 5px 8px 0 rgba(24,95,255,.1);
+    font-size: 16px;
+    font-weight: normal;
+    transition: height, font-size, background-color 0.3s ease;
+    outline: none;
+}
+
+.submit_btn:hover, .submit_btn:focus {
+    background-color: #52A4B1;
+}
+
+.submit_btn:active {
+    background-color: #388094;
+}
+.autologin {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.autologin_label {
+    margin-left: 0.25rem;
+    user-select: none;
+}
+
+.register_link, .forget {
+    display: block;
+    margin-top: 1rem;
+}
+
+.securityCode_label {
+    display: flex;
+}
+
+.securityCode_input {
+    flex: 0 0 65%;
+    width: 65%;
+}
+
+.securityCode_img {
+    flex: 0 0 25%;
+    width: 25%;
+    margin-left: auto;
+}
+
+.login_link {
+    display: block;
+    margin: 20px 0;
+    align-self: flex-start;
+}

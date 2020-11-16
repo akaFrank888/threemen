@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录</title>
+    <link rel="stylesheet" href="/static/css/normalize.css">
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="login_dynamic.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <a href="/" class="logo">
+            <img class="logo_img" src="/static/img/three_men_transparent.png" alt="Three men">
+        </a>
+        <div class="card">
+            <div class="slider_wrapper">
+                <ul class="side_slider">
+                    <li class="slider_item"><img src="/static/img/login_register_shared/0.jpg" alt="0"
+                            class="slider_img"></li>
+                    <li class="slider_item"><img src="/static/img/login_register_shared/1.jpg" alt="1"
+                            class="slider_img"></li>
+                    <li class="slider_item"><img src="/static/img/login_register_shared/2.jpg" alt="2"
+                            class="slider_img"></li>
+                </ul>
+            </div>
+            <div class="login_panel">
+                <h1 class="page_title">欢迎登录平台</h1>
+                <h2 class="page_second_title">每一天，乐在服务。</h2>
+                <form method="POST" class="form">
+                    <label for="account" class="account_label label">
+                        <input class="account_input input" type="text" name="account" id="account"
+                            autocomplete="username" required>
+                        <div class="inline_text">
+                            <img src="/static/img/login_register_shared/username.png" alt="username" class="text_icon">
+                            账号
+                        </div>
+                    </label>
+                    <label for="password" class="password_label label">
+                        <input class="password_input input" type="password" name="password" id="password"
+                            autocomplete="current-password" required>
+                        <div class="inline_text">
+                            <img src="/static/img/login_register_shared/password.png" alt="password" class="text_icon">
+                            密码
+                        </div>
+                    </label>
+                    <div class="autologin">
+                        <input type="checkbox" id="autologin">
+                        <label class="autologin_label" for="autologin">记住我</label>
+                    </div>
+                    <button type="submit" class="submit_btn">立即登录</button>
+                </form>
+                <!-- <a href="#" class="forget">忘记密码</a> -->
+                <a href="/register" class="register_link">注册账号</a>
+            </div>
+        </div>
+    </div>
+    <script src="/static/js/slider.js"></script>
+    <script src="login.js"></script>
+</body>
+
+</html>

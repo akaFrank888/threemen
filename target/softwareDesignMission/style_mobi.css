@@ -1,0 +1,17 @@
+@media (max-width: 1200px) {
+    .main_wrapper {
+        padding: 0 1rem;
+    }
+}
+
+@media (max-width: 720px) {
+    .aside_info .aside_list {
+        flex-wrap: wrap;
+    }
+
+    .aside_info .aside_list .list_item {
+        width: 50%;
+        margin-bottom: 5%;
+        flex: 0 0 47.5%;
+    }
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>修改信息</title>
+    <link rel="stylesheet" href="edit.css">
+</head>
+
+<body>
+    <header>
+        <div class="header_wrapper">
+            <div class="logo"><a href="/" class="logo_link"><img src="/static/img/three_men_transparent.png" alt="Three men logo"
+                        class="logo_img"></a></div>
+            <ul class="section_list">
+                <h1 class="visually_hidden list_title">区域</h1>
+                <li class="list_item"><a href="/" class="item_link active">首页</a></li>
+                <li class="list_item"><a href="/search" class="item_link">兼职</a></li>
+                <li class="list_item"><a href="/ordering_food" class="item_link">食堂订餐</a></li>
+                <li class="list_item"><a href="/shopping/buy/" class="item_link">超市代购</a></li>
+                <li class="list_item"><a href="/logistic/buy/" class="item_link">快递帮拿</a></li>
+            </ul>
+            <section class="account_section login_and_register">
+            <!-- <section class="account_section login_and_register hidden"> -->
+                <a href="/login" class="login account_func">登录</a>
+                <a href="/register" class="register account_func">注册</a>
+            </section>
+            <section class="account_section with_avatar hidden">
+            <!-- <section class="account_section with_avatar"> -->
+                <a href="/me" class="account">
+                    <img src="/static/img/default_avatar.png" alt="User avatar" class="avatar">
+                </a>
+                <div class="avatar_panel">
+                <!-- <div class="avatar_panel" style="opacity: 1; pointer-events: all;"> -->
+                    <div class="avatar_name_wrapper">
+                        <a href="/me" class="avatar">
+                            <img src="/static/img/default_avatar.png" alt="User avatar" class="avatar_img">
+                        </a>
+                        <h1 class="nickname">用户名</h1>
+                    </div>
+                    <div class="func_list_wrapper">
+                        <ul class="func_list">
+                            <li class="list_item"><a href="#" class="item_link" id="balance">金子余额<span class="balance">0</span></a></li>
+                            <li class="list_item"><a href="#" class="item_link" id="recharge">金子充值</a></li>
+                            <li class="list_item"><a href="#" class="item_link" id="withdraw">金子提现</a></li>
+                            <li class="list_item"><a href="/me/order" class="item_link" id="order">我的订单</a></li>
+                            <li class="list_item"><a href="/me" class="item_link" id="verify">兼职认证</a></li>
+                            <li class="list_item"><a href="#" class="item_link logout" id="logout">退出登录</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </header>
+    <div class="verify_panel edit_panel hide">
+        <h1 class="panel_title">身份认证</h1>
+        <form method="post" class="verify_form" id="verify_form">
+            <div class="item">
+                <input type="text" name="realizeAccount" id="username" autocomplete="username" required>
+                <label for="username">教务系统账号</label>
+            </div>
+            <div class="item">
+                <input type="password" name="realizePassword" id="password" autocomplete="current-password" required>
+                <label for="password">教务系统密码</label>
+            </div>
+            <button type="submit" class="change_pw_btn">认证</button>
+        </form>
+    </div>
+    <div class="change_pw_panel edit_panel hide">
+        <h1 class="panel_title">修改信息</h1>
+        <form method="post" class="change_pw" id="change_pw">
+            <div class="item">
+                <input type="text" name="nickname" id="name" autocomplete="nickname" required>
+                <label for="name">昵称</label>
+            </div>
+            <div class="item">
+                <input type="text" name="department" id="department" autocomplete="off" required>
+                <label for="department">院</label>
+            </div>
+            <div class="item">
+                <input type="text" name="master" id="master" autocomplete="off" required>
+                <label for="master">专业</label>
+            </div>
+            <div class="item">
+                <input type="text" name="yuan" id="section" autocomplete="address-line1" required><span class="input_label">苑</span>
+                <label for="section">苑</label>
+            </div>
+            <div class="item">
+                <input type="text" name="dong" id="building" autocomplete="address-line2" required><span class="input_label">栋</span>
+                <label for="building">栋</label>
+            </div>
+            <div class="item">
+                <input type="text" name="phone" id="phone" autocomplete="tel" required>
+                <label for="phone">手机号</label>
+            </div>
+            <button type="submit" class="change_pw_btn">确认</button>
+        </form>
+    </div>
+    <script src="/static/js/init_page.js"></script>
+    <script src="/static/js/autoComplete.js"></script>
+    <script src="edit.js"></script>
+</body>
+
+</html>

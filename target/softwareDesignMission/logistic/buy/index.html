@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>确认订单</title>
+</head>
+
+<body>
+    <main>
+        <div class="wrapper">
+            <form method="post">
+                <div class="address_section">
+                    <div class="detail_address">
+                        <div class="name info_item">
+                            <input type="text" name="name" id="name" autocomplete="name" required>
+                            <div class="label_wrapper">
+                                <img src="/static/img/buy/name.png" alt="name" class="item_img name">
+                                <label for="name" class="info_label name_label">姓名</label>
+                            </div>
+                        </div>
+                        <div class="tel info_item">
+                            <input type="tel" name="phone" id="phone" autocomplete="tel" required>
+                            <div class="label_wrapper">
+
+                                <img src="/static/img/buy/tel.png" alt="tel" class="item_img tel">
+                                <label for="phone" class="info_label tel_label">手机号</label>
+                            </div>
+                        </div>
+                        <div class="address info_item">
+                            <label class="address_wrapper" for="section">
+                                <input type="text" name="yuan" id="section" autocomplete="address-line1" required>
+                                <div class="label_wrapper">
+                                    <img src="/static/img/buy/address.png" alt="address" class="item_img address">
+                                    <label for="section" class="info_label address_label">苑</label>
+                                </div>
+                            </label>
+                            <label class="address_wrapper">
+                                <input type="text" name="dong" id="building" autocomplete="address-line2" required>
+                                <label class="label_wrapper" for="building">
+                                    <img src="/static/img/buy/address.png" alt="address" class="item_img address">
+                                    <label for="building" class="info_label address_label">栋</label>
+                                </label>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="info_wrapper">
+                    <div class="additional_info">
+                        <div class="info_item">
+                            <img src="/static/img/buy/site.png" alt="site" class="item_img site">
+                            <span class="info_label site_label">站点</span>
+                            <div class="site_choice_wrapper">
+                                <label class="site_label"><input type="radio" name="commAddress" id="no_20" value="北苑20栋"
+                                        checked>北苑20栋</label>
+                                <label class="site_label"><input type="radio" name="commAddress" id="no_18"
+                                        value="北苑18栋">北苑18栋</label>
+                                <label class="site_label"><input type="radio" name="commAddress" id="express"
+                                        value="校门邮政">校门邮政</label>
+                                <label class="site_label"><input type="radio" name="commAddress" id="outside"
+                                        value="公交站">公交站</label>
+                            </div>
+                        </div>
+                        <div class="info_item">
+                            <img src="/static/img/buy/item.png" alt="item" class="item_img item">
+                            <span class="info_label size_label">物品大小</span>
+                            <div class="size_choice_wrapper">
+                                <label class="size_label"><input type="radio" name="commCostCoin" id="small" value="20"
+                                        checked>小件</label>
+                                <label class="size_label"><input type="radio" name="commCostCoin" id="medium"
+                                        value="40">中件</label>
+                                <label class="size_label"><input type="radio" name="commCostCoin" id="large"
+                                        value="60">大件</label>
+                            </div>
+                        </div>
+                        <div class="info_item">
+                            <input type="text" name="commInfo" id="code" required>
+                            <div class="label_wrapper">
+
+                                <img src="/static/img/buy/code.png" alt="code" class="item_img code">
+                                <label for="code" class="info_label code_label">取件码</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="note_wrapper">
+                        <div class="info_item">
+                            <img src="/static/img/buy/note.png" alt="note" class="item_img note">
+                            <label for="note" class="info_label note_label">备注</label>
+                        </div>
+                        <textarea name="commLeftMessage" id="note" cols="30" rows="10"></textarea>
+                    </div>
+                </div>
+            </form>
+            <!-- <div class="func">
+                <div class="func_item">
+                    <a href="#" class="link_block">
+                        <img src="/static/img/buy/customer_support.png" alt="customer support" class="item_img">
+                        <span href="#" class="customer_support func_label">客服咨询</span>
+                    </a>
+                </div>
+            </div> -->
+        </div>
+        <div class="action_bar">
+            <div class="counter">
+                <span class="counter_label">待支付:</span>
+                <p class="total"><span class="total_content" id="total_content">20</span>金子</p>
+            </div>
+            <div class="checkin">
+                <button class="checkin_btn">提交订单</button>
+            </div>
+        </div>
+    </main>
+    <script src="/static/js/init_page.js"></script>
+    <script src="script.js"></script>
+    <script src="/static/js/autoComplete.js"></script>
+</body>
+
+</html>

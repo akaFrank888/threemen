@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>订单</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="order_wrapper">
+            <div class="list_swapper">
+                <ul class="swapper_list">
+                    <li class="list_item"><a href="#" class="item_link" id="my_order">我下的单</a></li>
+                    <li class="list_item"><a href="#" class="item_link" id="picked_order">我接的单</a></li>
+                </ul>
+            </div>
+            <div class="order_list_wrapper">
+                <ul class="my_order_list order_flow">
+                    <!-- <li class="list_item">
+                        <a href="#" class="item_link">
+                            <h1 class="item_title">顺客隆</h1>
+                            <ul class="item_brief">
+                                <li class="brief_item"><span class="item_label">送达地址</span>南苑11栋</li>
+                                <li class="brief_item indicator">待接单</li>
+                            </ul>
+                        </a>
+                    </li> -->
+                </ul>
+                <ul class="picked_order_list order_flow">
+                    <!-- <li class="list_item">
+                        <a href="#" class="item_link">
+                            <h1 class="item_title">顺客隆</h1>
+                            <ul class="item_brief">
+                                <li class="brief_item"><span class="item_label">送达地址</span>南苑11栋</li>
+                                <li class="brief_item indicator">待接单</li>
+                            </ul>
+                        </a>
+                    </li> -->
+                </ul>
+            </div>
+        </div>
+        <div class="order_detail_wrapper">
+            <section class="info_detail">
+                <div class="customer_wrapper_empty">
+                    <p class="note">还没有选择项目</p>
+                </div>
+                <div class="customer_wrapper hide">
+                    <ul class="customer_info_list">
+                        <li class="list_item">
+                            <span class="item_label">昵称</span>
+                            <span class="item_content" id="customer_nickname"></span>
+                        </li>
+                        <li class="list_item">
+                            <span class="item_label">手机号</span>
+                            <span class="item_content" id="customer_phone"></span>
+                        </li>
+                        <li class="list_item">
+                            <span class="item_label">送达地址</span>
+                            <span class="item_content" id="customer_address"></span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="order_food_wrapper common_wrapper hide">
+                    <p class="order_address"><span class="order_label">购买地址</span><span class="address_content" id="order_food_address">南苑食堂</span></p>
+                    <div class="order_wrapper">
+                        <ul class="order_list">
+                            <li class="list_item">
+                                <span class="order_content">名字</span>
+                                <span class="order_number">1</span>
+                                <span class="order_reward">0</span>
+                            </li>
+                            <li class="list_item">
+                                <span class="order_content">名字</span>
+                                <span class="order_number">1</span>
+                                <span class="order_reward">0</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="note_wrapper">
+                        <span class="note_label">备注</span>
+                        <p class="note_content" id="order_food_note">备注内容</p>
+                    </div>
+                </div>
+                <div class="shopping_wrapper common_wrapper hide">
+                    <div class="shopping_info_wrapper">
+                        <ul class="shopping_info_list">
+                            <li class="list_item"><span class="item_label">购买地址</span><span id="buy_address"></span></li>
+                            <li class="list_item large_block">
+                                <span class="item_label">商品信息</span>
+                                <div class="shopping_info_content_wrapper">
+                                    <p class="shopping_info_content"></p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="logistic_wrapper common_wrapper hide">
+                    <div class="logistic_info_wrapper">
+                        <ul class="logistic_info_list">
+                            <li class="list_item">
+                                <span class="item_label">取件地址</span>
+                                <span class="item_content" id="logistic_address">北苑18栋负一层</span>
+                            </li>
+                            <li class="list_item">
+                                <span class="item_label">取件码</span>
+                                <span class="item_content" id="code">10086</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="note_wrapper">
+                        <span class="note_label">备注</span>
+                        <p class="note_content" id="logistic_note">尽快送达</p>
+                    </div>
+                </div>
+                <div class="status_indicator">
+                    <ul class="status_info_list info_list">
+                        <li class="list_item">
+                            <span class="item_label" id="status_time_label">时间</span>
+                            <span class="item_content" id="status_time">2020.12.02</span>
+                        </li>
+                        <li class="list_item">
+                            <span class="item_label">订单状态</span>
+                            <span class="item_content" id="order_status">已送达</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="picker_info">
+                    <ul class="picker_info_list info_list">
+                        <li class="list_item">
+                            <span class="item_label">接单者昵称</span>
+                            <span class="item_content" id="picker_name">Tom</span>
+                        </li>
+                        <li class="list_item">
+                            <span class="item_label">接单者手机号</span>
+                            <span class="item_content" id="picker_phone">110</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="comment">
+                    <ul class="comment_list info_list">
+                        <form method="post" id="comment_form">
+                            <li class="list_item">
+                                <span class="item_label">评价</span>
+                                <div class="item_content" id="comment_content">
+                                    <span class="rate good"><input type="radio" name="evaluate" id="good" class="visually_hidden" value="1" checked><label for="good">推荐</label></span>
+                                    <span class="rate bad"><input type="radio" name="evaluate" id="bad" class="visually_hidden" value="0"><label for="bad">不推荐</label></span>
+                                </div>
+                            </li>
+                            <li class="list_item">
+                                <textarea name="comment" id="comment_textarea" cols="30" rows="5" placeholder="评价内容"></textarea>
+                            </li>
+                        </form>
+                    </ul>
+                </div>
+                <div class="pick_bar hide">
+                    <!-- <div class="counter"><span class="item_label">跑腿费</span><span class="counter_content">0</span> 金子</div> -->
+                    <button type="button" class="pick_btn">取消订单</button>
+                </div>
+            </section>
+        </div>
+    </div>
+    <script src="/static/js/init_page.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

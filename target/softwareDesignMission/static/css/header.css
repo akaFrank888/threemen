@@ -1,0 +1,297 @@
+a, a:focus, a:visited {
+    color: black;
+    text-decoration: none;
+}
+
+.visually_hidden {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+}
+
+body {
+    background-color: #E1F5F6;
+}
+
+header {
+    position: relative;
+    z-index: 3;
+    position: fixed;
+    top: 0;
+    height: 64px;
+    width: 100%;
+    min-width: 320px;
+    background-color: #71c9ce;
+    box-shadow: 0px 2px 5px 0px rgba(0,0,0,.3);
+}
+
+.header_wrapper {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0 5%;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.page_title {
+    margin: 0;
+}
+
+.show_list_label,
+input.show_list {
+    display: none;
+}
+
+.logo {
+    height: 100%;
+    margin-right: auto;
+}
+
+.logo .logo_link {
+    display: block;
+    height: 100%;
+}
+
+.logo_img {
+    height: 100%;
+}
+
+.section_list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    width: 60%;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section_list .list_item {
+    height: 100%;
+    width: 20%;
+    text-align: center;
+    font-size: 18px;
+}
+
+.section_list .list_item .item_link {
+    color: #333;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    transition: background-color 0.1s ease, color 0.1s ease;
+    font-weight: bold;
+    outline: none;
+    user-select: none;
+}
+
+.section_list .list_item .item_link::after {
+    content: "";
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 4px;
+    background-color: #52A4B1;
+    /* opacity: 0; */
+    transition: background-color 0.1s ease-in-out;
+}
+
+.section_list .list_item .item_link:focus,
+.section_list .list_item .item_link:hover,
+.section_list .list_item .item_link.active {
+    color: #eee;
+    background-color: #52A4B1;
+}
+
+.section_list .list_item .item_link:focus::after,
+.section_list .list_item .item_link:hover::after,
+.section_list .list_item .item_link.active::after {
+    /* opacity: 1; */
+    background-color: #388094;
+}
+
+.account_section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: auto;
+    width: 150px;
+}
+
+.account_section .account_func {
+    color: #eee;
+    display: block;
+    width: 60px;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    border-radius: 16px;
+    background-color: #333;
+    font-size: 14px;
+}
+
+.account_section.hidden {
+    display: none;
+    /* display: flex; */
+}
+
+.account_section.with_avatar {
+    position: relative;
+    justify-content: center;
+}
+
+.account_section.with_avatar .account {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    border: 1px solid #eee;
+    border-radius: 50%;
+    overflow: hidden;
+    transform-origin: top;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.account_section.with_avatar .account.hide {
+    opacity: 0;
+    transform: translateY(1rem) scale(1.2);
+    pointer-events: none;
+}
+
+.account_section.with_avatar .avatar_panel {
+    pointer-events: none;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    width: 250px;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 0 2px 12px 0 rgba(0,0,0,.1);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    transform: translateY(-1rem);
+}
+
+.account_section.with_avatar .avatar_panel.show {
+    pointer-events: all;
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.account_section.with_avatar .avatar_panel .avatar_name_wrapper {
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.avatar_panel .avatar_name_wrapper .avatar {
+    display: block;
+    position: absolute;
+    top: -10%;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    overflow: hidden;
+    object-fit: cover;
+    object-position: center;
+}
+
+.avatar_panel .avatar_name_wrapper .avatar .avatar_img {
+    width: 64px;
+    height: 64px;
+}
+
+.account_section.with_avatar .avatar_panel .avatar_name_wrapper .nickname {
+    margin: 0;
+    font-size: 18px;
+    margin-bottom: 0;
+}
+
+.account_section.with_avatar .avatar_panel .func_list {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.avatar_panel .func_list .list_item {
+    height: 2.5em;
+    box-sizing: border-box;
+}
+
+.avatar_panel .func_list .list_item .item_link {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 0.25em 1em;
+    box-sizing: border-box;
+    background-color: transparent;
+    transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out;
+    outline: none;
+    user-select: none;
+}
+
+.avatar_panel .func_list .list_item .item_link .balance {
+    margin-left: auto;
+}
+
+.avatar_panel .func_list .list_item .item_link:hover {
+    color: #71c9ce;
+    background-color: #eee;
+}
+
+.avatar_panel .func_list .list_item .item_link::before {
+    content: "";
+    display: block;
+    height: 1.5em;
+    width: 1.5em;
+    margin-right: 0.5em;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 1.25em;
+}
+
+.avatar_panel .func_list .list_item .item_link#balance::before {
+    background-image: url('/static/img/avatar_panel/balance.png');
+}
+
+.avatar_panel .func_list .list_item .item_link#recharge::before {
+    background-image: url('/static/img/avatar_panel/recharge.png');
+}
+
+.avatar_panel .func_list .list_item .item_link#withdraw::before {
+    background-image: url('/static/img/avatar_panel/withdraw.png');
+}
+
+.avatar_panel .func_list .list_item .item_link#order::before {
+    background-image: url('/static/img/avatar_panel/order.png');
+}
+
+.avatar_panel .func_list .list_item .item_link#verify::before {
+    background-image: url('/static/img/avatar_panel/verify.png');
+}
+
+.avatar_panel .func_list .list_item .item_link#logout::before {
+    background-image: url('/static/img/avatar_panel/logout.png');
+}
+
+.account_section.with_avatar .account .avatar {
+    height: 100%;
+}

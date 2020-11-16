@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="me.css">
+    <title>我的</title>
+</head>
+
+<body>
+    <main>
+        <div class="content_wrapper">
+            <div class="top_wrapper">
+                <div class="avatar_wrapper">
+                    <img src="/static/img/default_avatar.png" alt="My avatar" class="avatar_img" id="my_avatar">
+                    <a href="#" class="mask">修改头像</a>
+                </div>
+                <p class="nickname" id="nickname_avatar">小明</p>
+                <!-- <button class="edit">修改昵称</button> -->
+            </div>
+            <div class="info_wrapper">
+                <section class="brief">
+                    <h1 class="section_title">基本信息</h1>
+                    <ul class="brief_list">
+                        <li class="list_item"><span class="item_label">昵称</span><span class="item_content"
+                                class="nickname" id="nickname_detail">小明</span></li>
+                        <li class="list_item"><span class="item_label">手机号</span><span class="item_content"
+                                id="phone">手机号</span></li>
+                        <li class="list_item"><span class="item_label">地址</span><span class="item_content"
+                                id="address">南苑11栋</span></li>
+                        <li class="list_item"><span class="item_label">邮箱</span><span class="item_content"
+                                id="email">t@tt.t</span></li>
+                        <li class="list_item"><span class="item_label">账号</span><span class="item_content"
+                                id="account">账号</span></li>
+                        <li class="list_item"><a href="/me/edit" class="verify">修改资料</a></li>
+                    </ul>
+                </section>
+                <section class="verification_info">
+                    <h1 class="section_title">认证信息</h1>
+                    <p class="not_verified">还未认证，<a href="#" class="verify" id="verify_link">前去认证→</a></p>
+                    <ul class="verification_info_list hide">
+                        <li class="list_item"><span class="item_label">真实姓名</span><span class="item_content"
+                                id="real_name">小明</span></li>
+                        <li class="list_item"><span class="item_label">学号</span><span class="item_content"
+                                id="id">1000010</span></li>
+                    </ul>
+                </section>
+                <section class="action">
+                    <h1 class="section_title visually_hidden">相关操作</h1>
+                    <button type="button" class="reset_passwd btn">修改密码</button>
+                    <!-- <button type="button" class="working_me">打工的我</button>
+                    <button type="button" class="want_work">我要兼职</button> -->
+                </section>
+            </div>
+        </div>
+        <div class="change_pw_panel">
+            <h1 class="panel_title">修改密码</h1>
+            <form method="post" class="change_pw" id="change_pw">
+                <label for="account" class="account_label label visually_hidden">用户名</label>
+                <input class="account_input input visually_hidden" type="text" name="account" id="account"
+                    autocomplete="username">
+                <div class="item">
+                    <input type="password" name="oldPassword" id="old" autocomplete="current-password" required>
+                    <label for="old">旧密码</label>
+                </div>
+                <div class="item">
+                    <input type="password" name="newPassword" id="new" autocomplete="new-password" required>
+                    <label for="new">新密码</label>
+                </div>
+                <div class="item">
+                    <input type="password" id="new_repeat" autocomplete="new-password" required>
+                    <label for="new_repeat">重复新密码</label>
+                </div>
+                <button type="submit" class="change_pw_btn">确认</button>
+            </form>
+        </div>
+        <div class="upload_avatar">
+            <form class="upload_form">
+                <div class="item">
+                    <label for="upload">选择图片</label>
+                    <input class="visually_hidden" type="file" name="upload" id="upload" accept="image/*">
+                    <div class="preview">
+                        <img src="/static/img/default_avatar.png" id="preview" alt="upload image">
+                    </div>
+                    <button type="submit">上传</button>
+                </div>
+            </form>
+        </div>
+        <div class="verify_wrapper">
+            <form class="verify_form">
+                <div class="item"><input type="text" class="item_input" name="realName" id="name" autocomplete="name"
+                        required><label for="name" class="item_label">真实姓名</label></div>
+                <div class="item"><input type="number" class="item_input" min="0" step="0" name="stuID" id="id"
+                        required><label for="id" class="item_label">学号</label></div>
+                <button class="submit_btn">提交信息</button>
+            </form>
+        </div>
+        <!-- <div class="working_me">
+            <div class="detail">
+                <p class="rating">分数X</p>
+                <p class="medal">勋章X</p>
+            </div>
+            <div class="more_info">
+                <div class="info_wrapper">
+                    <p class="username">账号占位符</p>
+                    <p class="name">姓名占位符</p>
+                    <p class="id">学号占位符</p>
+                    <p class="total_count">总评价占位符</p>
+                    <p class="bad_count">差评数占位符</p>
+                </div>
+            </div>
+        </div>
+        <div class="want_work">
+            <div class="more_info">
+                <div class="info_wrapper">
+                    <p class="name">姓名占位符</p>
+                    <p class="id">学号占位符</p>
+                </div>
+            </div>
+        </div> -->
+    </main>
+
+    <script src="/static/js/init_page.js"></script>
+    <script src="me.js"></script>
+</body>
+
+</html>

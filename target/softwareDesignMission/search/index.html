@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我要接单</title>
+    <link rel="stylesheet" href="search.css">
+    <link rel="stylesheet" href="search_mobi.css">
+</head>
+
+<body>
+    <noscript>
+        <p>
+            请打开Javascript以正常使用。<a
+                href="https://support.microsoft.com/zh-cn/help/3135465/how-to-enable-javascript-in-windows">如何打开Javascript?</a>
+        </p>
+    </noscript>
+    <!-- <aside class="side_func">
+        <button class="to_top">返回顶部</button>
+        <button type="button" class="to_top">↑</button>
+    </aside> -->
+    <main>
+        <section class="search filter_block hide">
+        <!-- <section class="search filter_block"> -->
+            <label for="search_bar" class="search_label block_title">搜索内容</label>
+            <input id="search_bar" type="search" class="search_bar">
+            <button type="button" class="search_btn">搜索</button>
+        </section>
+        <section class="filter">
+            <h1 class="visually_hidden filter_title">筛选</h1>
+            <!-- <div class="area filter_block">
+                <h2 class="area_title block_title">地区</h2>
+                <ul class="area_list list">
+                    <li class="list_item"><button class="list_btn active">所有</button></li>
+                    <li class="list_item"><button class="list_btn">南苑</button></li>
+                    <li class="list_item"><button class="list_btn">北苑</button></li>
+                </ul>
+            </div> -->
+            <div class="catagory filter_block">
+                <h2 class="area_title block_title">类别</h2>
+                <ul class="catagory_list list">
+                    <li class="list_item"><button type="button" class="list_btn" data-catagory="shopping">超市代购</button></li>
+                    <li class="list_item"><button type="button" class="list_btn" data-catagory="order_food">食堂订餐</button></li>
+                    <li class="list_item"><button type="button" class="list_btn" data-catagory="logistic">快递帮拿</button></li>
+                    <li class="list_item"><button type="button" class="list_btn" data-catagory="working">勤工俭学</button></li>
+                    <!-- <li class="list_item"><button type="button" class="list_btn active" data-catagory="all">所有</button></li> -->
+                </ul>
+                <!-- <button type="button" name="catagory_btn" class="catagory_btn btn">点我显示列表</button> -->
+            </div>
+        </section>
+        <!-- <section class="sort">
+            <h1 class="visually_hidden sort_title">排序</h1>
+            <div class="sort_block">
+                <ul class="sort_list list">
+                    <li class="list_item"><button class="list_btn active">最近发布</button></li>
+                    <li class="list_item"><button class="list_btn">积分最高</button></li>
+                    <li class="list_item"><button class="list_btn">关注最多</button></li>
+                </ul>
+            </div>
+        </section> -->
+
+        <div class="info_wrapper">
+            <section class="info">
+                <div class="info_flow">
+                    <ul class="info_list">
+                        <!-- <li class="list_item">
+                            <a href="#" class="item_link">
+                                <h1 class="item_title">教务处</h1>
+                                <ul class="item_brief">
+                                    <li class="brief_item"><span class="item_label">固定岗位</span>整理资料，统计数据</li>
+                                    <li class="brief_item"><span class="item_label">临时岗位</span>考场布置，课表粘贴</li>
+                                </ul>
+                                <div class="revenue"><span class="num_decorated">666</span>金子</div>
+                            </a>
+                        </li> -->
+                    </ul>
+                </div>
+            </section>
+            <section class="info_detail swapped_right">
+                <button alt="arrow" class="arrow">隐藏</button>
+                <div class="customer_wrapper_empty">
+                <!-- <div class="customer_wrapper_empty hide"> -->
+                    <p class="note">还没有选择订单</p>
+                </div>
+                <div class="customer_wrapper hide">
+                <!-- <div class="customer_wrapper"> -->
+                    <ul class="customer_info_list">
+                        <li class="list_item">
+                            <span class="item_label">昵称</span>
+                            <span class="item_content" id="customer_nickname"></span>
+                        </li>
+                        <li class="list_item">
+                            <span class="item_label">手机号</span>
+                            <span class="item_content" id="customer_phone"></span>
+                        </li>
+                        <li class="list_item">
+                            <span class="item_label">送达地址</span>
+                            <span class="item_content" id="customer_address"></span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="order_food_wrapper common_wrapper hide">
+                <!-- <div class="order_food_wrapper common_wrapper"> -->
+                    <p class="order_address"><span class="order_label">购买地址</span><span class="address_content" id="order_food_address">南苑食堂</span></p>
+                    <div class="order_wrapper">
+                        <ul class="order_list">
+                            <li class="list_item">
+                                <span class="order_content">名字</span>
+                                <span class="order_number">1</span>
+                                <span class="order_reward">0</span>
+                            </li>
+                            <li class="list_item">
+                                <span class="order_content">名字</span>
+                                <span class="order_number">1</span>
+                                <span class="order_reward">0</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="note_wrapper">
+                        <span class="note_label">备注</span>
+                        <p class="note_content" id="order_food_note">备注内容</p>
+                    </div>
+                </div>
+                <div class="shopping_wrapper common_wrapper hide">
+                <!-- <div class="shopping_wrapper common_wrapper"> -->
+                    <div class="shopping_info_wrapper">
+                        <ul class="shopping_info_list">
+                            <li class="list_item"><span class="item_label">购买地址</span><span id="buy_address"></span></li>
+                            <li class="list_item large_block">
+                                <span class="item_label">商品信息</span>
+                                <div class="shopping_info_content_wrapper">
+                                    <p class="shopping_info_content"></p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="logistic_wrapper common_wrapper hide">
+                <!-- <div class="logistic_wrapper common_wrapper"> -->
+                    <div class="logistic_info_wrapper">
+                        <ul class="logistic_info_list">
+                            <li class="list_item">
+                                <span class="item_label">取件地址</span>
+                                <span class="item_content" id="logistic_address">北苑18栋负一层</span>
+                            </li>
+                            <li class="list_item">
+                                <span class="item_label">取件码</span>
+                                <span class="item_content" id="code">10086</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="note_wrapper">
+                        <span class="note_label">备注</span>
+                        <p class="note_content" id="logistic_note">尽快送达</p>
+                    </div>
+                </div>
+                <div class="pick_bar hide">
+                <!-- <div class="pick_bar"> -->
+                    <div class="counter"><span class="item_label">跑腿费</span><span class="counter_content">0</span> 金子</div>
+                    <button type="button" class="pick_btn">接单</button>
+                </div>
+            </section>
+        </div>
+        <ul class="select_page_list">
+            <h1 class="visually_hidden page_list_title">翻页</h1>
+            <li class="list_item prev_page"><button type="button" class="list_btn" id="prev_page_btn"><span class="visually_hidden label">前一页</span>←</button></li>
+            <li class="list_item next_page"><button type="button" class="list_btn" id="next_page_btn"><span class="visually_hidden label">后一页</span>→</button></li>
+        </ul>
+    </main>
+    <script src="/static/js/init_page.js"></script>
+    <script src="search.js"></script>
+</body>
+
+</html>

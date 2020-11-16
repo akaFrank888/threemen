@@ -1,0 +1,75 @@
+@media (max-width: 750px) {
+    .show_list_label {
+        display: block;
+        position: absolute;
+        left: 5%;
+        width: 32px;
+        height: 32px;
+        background: no-repeat center/32px url('/static/img/menu.svg');
+        transition: transform 0.3s ease-in-out;
+        font-size: 0;
+    }
+
+    input.show_list:checked + .show_list_label {
+        transform: rotate(90deg);
+    }
+
+    .section_list {
+        position: absolute;
+        top: 64px;
+        width: 100%;
+        height: calc(100vh - 64px);
+        padding: 1rem 5% 0;
+        flex-direction: column;
+        justify-content: flex-start;
+        background-color: #71c9ce;
+        border-top: 1px solid #ccc;
+        opacity: 0;
+        transform-origin: top;
+        transform: scaleY(0);
+        /* transition: opacity 0.3s ease-in-out, transform 0.3s cubic-bezier(0.52, 0.16, 0.24, 1); */
+        /* transition: opacity 0.3s ease-in-out; */
+        box-sizing: border-box;
+        pointer-events: none;
+    }
+
+    .section_list.animated {
+        transition: opacity 0.3s ease-in-out, transform 0.3s cubic-bezier(0.52, 0.16, 0.24, 1);
+    }
+
+    .section_list .list_item {
+        height: 10%;
+        width: 100%;
+    }
+
+    input.show_list:checked ~ .section_list {
+        opacity: 1;
+        pointer-events: all;
+        transform: scaleY(1);
+    }
+
+    .account_section,
+    .account_section.with_avatar {
+        position: absolute;
+        right: 5%;
+        transition: opacity 0.3s ease-in-out;
+    }
+
+    .account_section.login_and_register {
+        justify-content: flex-end;
+    }
+
+    .account_section.login_and_register .register {
+        display: none;
+    }
+
+    input.show_list:checked ~ .account_section {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .logo {
+        margin-right: 0;
+    }
+
+}

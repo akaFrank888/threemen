@@ -1,0 +1,50 @@
+@media (max-width: 810px) {
+    .info_wrapper {
+        position: relative;
+    }
+
+    .info {
+        width: 100%;
+    }
+
+    .info_detail {
+        position: absolute;
+        margin-left: 0;
+        right: 0;
+        height: 100%;
+        width: 220px;
+    }
+
+    .info_detail.swapped_right {
+        transform: translateX(100%);
+    }
+
+    .info_detail .arrow {
+        display: block;
+        position: absolute;
+        left: 2px;
+        top: 50%;
+        bottom: 50%;
+        content: "";
+        padding: 0;
+        height: 16px;
+        width: 16px;
+        border: 0;
+        background: none;
+        background-image: url('/static/img/arrow.svg');
+        background-size: 16px;
+        background-position: center;
+        cursor: pointer;
+        transition: transform 0.3s ease-in-out;
+        font-size: 0;
+        outline: none;
+    }
+
+    .info_detail.swapped_right .arrow {
+        transform: rotate(180deg);
+    }
+
+    .catagory_list .list_item:last-child {
+        margin-right: 0;
+    }
+}

@@ -1,0 +1,26 @@
+{
+  "name": "threemen-frontend",
+  "version": "0.1.0",
+  "description": "Threemen frontend",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.6.0",
+    "@typescript-eslint/parser": "^4.6.0",
+    "eslint": "^7.12.1",
+    "typescript": "^4.0.5"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitee.com/johnsmith-foo/threemen.git"
+  },
+  "keywords": [
+    "Frontend",
+    "Threemen"
+  ],
+  "author": "tomtiao",
+  "license": "ISC"
+}

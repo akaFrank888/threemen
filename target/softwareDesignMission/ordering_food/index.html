@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>食堂点餐</title>
+</head>
+
+<body>
+    <div class="go_dark"></div>
+    <div class="main_wrapper">
+        <!-- <aside class="show"> -->
+        <aside>
+            <div class="aside_wrapper">
+                <div class="stall_avatar_wrapper no_shrink stall_wrapper">
+                    <img src="/static/img/three_men_transparent.png" alt="stall_avatar" class="stall_avatar" id="stall_avatar">
+                </div>
+                <div class="tab_wrapper no_shrink stall_wrapper">
+                    <ul class="tab_list">
+                        <li class="list_item active" data-panel="order"><a href="#" class="item_link">点餐</a></li>
+                        <li class="list_item" data-panel="info"><a href="#" class="item_link">店铺</a></li>
+                    </ul>
+                </div>
+                <div class="stall_content_wrapper no_shrink stall_wrapper">
+                    <div class="side_nav_wrapper">
+                        <ul class="side_nav_list">
+                            <li class="list_item active"><a href="#0" class="item_link" data-index="0">默认</a></li>
+                        </ul>
+                    </div>
+                    <div class="main_content_wrapper">
+                        <dl class="dishes_list">
+                            <dt class="dishes_section_title" data-index="0" id="0">默认</dt>
+                            <dd class="dishes_item">
+                                <div class="dishes_img_wrapper">
+                                    <img src="#" alt="dishes" class="dishes_img">
+                                </div>
+                                <div class="dishes_desc">
+                                    <h1 class="dishes_name">名字</h1>
+                                    <p class="dishes_price"><span class="price_content">0</span></p>
+                                </div>
+                                <div class="dishes_add">
+                                    <button type="button" class="remove_dishes dishes_btn invisible">-</button>
+                                    <span class="counter invisible">1</span>
+                                    <button type="button" class="add_dishes dishes_btn">+</button>
+                                </div>
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+                <div class="stall_info_wrapper no_shrink stall_wrapper hide">
+                    <ul class="contact_list">
+                        <li class="list_item"><span class="item_label">店铺电话</span><a href="tel:" class="item_content"
+                                id="stall_phone"></a></li>
+                        <li class="list_item"><span class="item_label">店铺地址</span><span
+                                class="item_content">广东金融学院</span></li>
+                        <li class="list_item"><span class="item_label">经营场所</span><span class="item_content"
+                                id="position"></span></li>
+                        <li class="list_item"><span class="item_label">营业时间</span><span
+                                class="item_content">10:30-13:00; 17:00-19:00</span></li>
+                    </ul>
+                </div>
+                <div class="shopping_cart_wrapper no_shrink stall_wrapper">
+                    <div class="total_section buy_part">
+                        <span class="total_label">共计</span>
+                        <span class="total_content">0</span>
+                    </div>
+                    <div class="buy_section buy_part">
+                        <button type="button" class="buy_btn">现在下单</button>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <main>
+            <div class="main_content">
+                <div class="content_wrapper">
+                    <ul class="position_selection_list selection_list">
+                        <li class="list_item current_active" data-position="all"><a href="#" class="item_link">全部</a>
+                        </li>
+                        <li class="list_item" data-position="南苑食堂"><a href="#" class="item_link">南苑</a></li>
+                        <li class="list_item" data-position="北苑食堂"><a href="#" class="item_link">北苑</a></li>
+                    </ul>
+                    <section class="content_flow">
+                        <ul class="floor_selection_list selection_list">
+                            <li class="list_item current_active all" data-position="all"><a href="#"
+                                    class="item_link">全部</a></li>
+                            <li class="list_item south" data-position="南苑食堂" data-floor="4"><a href="#"
+                                    class="item_link">南苑四楼</a></li>
+                            <li class="list_item south" data-position="南苑食堂" data-floor="5"><a href="#"
+                                    class="item_link">南苑五楼</a></li>
+                            <li class="list_item north" data-position="北苑食堂" data-floor="1"><a href="#"
+                                    class="item_link">北苑一楼</a></li>
+                            <li class="list_item north" data-position="北苑食堂" data-floor="2"><a href="#"
+                                    class="item_link">北苑二楼</a></li>
+                            <li class="list_item north" data-position="北苑食堂" data-floor="3"><a href="#"
+                                    class="item_link">北苑三楼</a></li>
+                        </ul>
+                        <div class="stall section">
+                            <h1 class="visually_hidden section_title">店铺列表</h1>
+                            <ul class="content_list">
+                                <!-- <li class="list_item" data-position="南苑食堂" data-floor="1">
+                                    <a class="cover"></a>
+                                    <div class="bg_block"><img class="bg_img"
+                                            src="/static/img/order_food.jpg" alt="默认"></div>
+                                    <div class="text_content">
+                                        <h1 class="item_title">默认</h1>
+                                        <p class="description"></p>
+                                    </div>
+                                </li> -->
+                            </ul>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </main>
+    </div>
+    <div class="order_confirmation hide">
+    <!-- <div class="order_confirmation"> -->
+        <div class="wrapper">
+            <form method="post">
+                <div class="address_section">
+                    <div class="detail_address">
+                        <div class="name info_item">
+                            <input type="text" name="nickname" id="name" autocomplete="name" required>
+                            <div class="label_wrapper">
+                                <img src="/static/img/buy/name.png" alt="name" class="item_img name">
+                                <label for="name" class="info_label name_label">姓名</label>
+                            </div>
+                        </div>
+                        <div class="tel info_item">
+                            <input type="tel" name="phone" id="phone" autocomplete="tel" required>
+                            <div class="label_wrapper">
+
+                                <img src="/static/img/buy/tel.png" alt="tel" class="item_img tel">
+                                <label for="phone" class="info_label tel_label">手机号</label>
+                            </div>
+                        </div>
+                        <div class="address info_item">
+                            <label class="address_wrapper" for="section">
+                                <input type="text" name="yuan" id="section" autocomplete="address-line1" required>
+                                <div class="label_wrapper">
+                                    <img src="/static/img/buy/address.png" alt="address" class="item_img address">
+                                    <label for="section" class="info_label address_label">苑</label>
+                                </div>
+                            </label>
+                            <label class="address_wrapper">
+                                <input type="text" name="dong" id="building" autocomplete="address-line2" required>
+                                <label class="label_wrapper" for="building">
+                                    <img src="/static/img/buy/address.png" alt="address" class="item_img address">
+                                    <label for="building" class="info_label address_label">栋</label>
+                                </label>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="dishes_list_wrapper">
+                    <div class="order_wrapper">
+                        <ul class="order_list">
+                            <li class="list_item">
+                                <span class="order_content">名字</span>
+                                <span class="order_number">1</span>
+                                <span class="order_reward">0</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <p class="total">总计<span class="total_content" id="counter">0</span></p>
+                <div class="info_wrapper">
+                    <div class="note_wrapper">
+                        <div class="info_item">
+                            <img src="/static/img/buy/note.png" alt="note" class="item_img note">
+                            <label for="note" class="info_label note_label bold">备注</label>
+                        </div>
+                        <textarea name="commLeftMessage" id="note" cols="30" rows="10" placeholder="在此输入备注，如不加辣椒"
+                            required></textarea>
+                    </div>
+                </div>
+                <div class="action_bar">
+                    <div class="cancel">
+                        <button class="cancel_btn" type="button">取消</button>
+                    </div>
+                    <div class="counter">
+                        <span class="counter_label">待支付</span>
+                        <p class="total"><span class="total_content">20金子</span></p>
+                    </div>
+                    <div class="checkin">
+                        <button class="checkin_btn" type="submit">提交订单</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <div class="footer_wrapper">
+
+        </div>
+    </footer>
+    <script src="/static/js/init_page.js"></script>
+    <script src="index.js"></script>
+    <script src="/static/js/autoComplete.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>确认订单</title>
+</head>
+
+<body>
+    <main>
+        <div class="wrapper">
+            <form method="post">
+                <div class="address_section">
+                    <div class="detail_address">
+                        <div class="name info_item">
+                            <input type="text" name="nickname" id="name" autocomplete="name" required>
+                            <div class="label_wrapper">
+                                <img src="/static/img/buy/name.png" alt="name" class="item_img name">
+                                <label for="name" class="info_label name_label">姓名</label>
+                            </div>
+                        </div>
+                        <div class="tel info_item">
+                            <input type="tel" name="phone" id="phone" autocomplete="tel" required>
+                            <div class="label_wrapper">
+
+                                <img src="/static/img/buy/tel.png" alt="tel" class="item_img tel">
+                                <label for="phone" class="info_label tel_label">手机号</label>
+                            </div>
+                        </div>
+                        <div class="address info_item">
+                            <label class="address_wrapper" for="section">
+                                <input type="text" name="yuan" id="section" autocomplete="address-line1" required>
+                                <div class="label_wrapper">
+                                    <img src="/static/img/buy/address.png" alt="address" class="item_img address">
+                                    <label for="section" class="info_label address_label">苑</label>
+                                </div>
+                            </label>
+                            <label class="address_wrapper">
+                                <input type="text" name="dong" id="building" autocomplete="address-line2" required>
+                                <label class="label_wrapper" for="building">
+                                    <img src="/static/img/buy/address.png" alt="address" class="item_img address">
+                                    <label for="building" class="info_label address_label">栋</label>
+                                </label>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="info_wrapper">
+                    <div class="note_wrapper">
+                        <div class="info_item">
+                            <img src="/static/img/buy/note.png" alt="note" class="item_img note">
+                            <label for="note" class="info_label note_label bold">请填写想要代购的商品</label>
+                        </div>
+                        <textarea name="commInfo" id="note" cols="30" rows="10" placeholder="点击输入你的商品要求，如某品牌珍珠奶茶，大杯，热，半糖"
+                            required></textarea>
+                        <div class="suggestion">
+                            <ul class="suggestion_list">
+                                <li class="suggestion_item"><button class="suggestion_btn" type="button">无接触配送</button>
+                                </li>
+                                <li class="suggestion_item"><button class="suggestion_btn" type="button">放在门口</button>
+                                </li>
+                                <li class="suggestion_item"><button class="suggestion_btn" type="button">挂门把手上</button>
+                                </li>
+                                <li class="suggestion_item"><button class="suggestion_btn" type="button">到了电话联系</button>
+                                </li>
+                                <li class="suggestion_item"><button class="suggestion_btn" type="button">慢慢送不着急</button>
+                                </li>
+                                <li class="suggestion_item"><button class="suggestion_btn" type="button">注意安全</button>
+                                </li>
+                                <li class="suggestion_item"><button class="suggestion_btn" type="button">需要小票</button>
+                                </li>
+                                <li class="suggestion_item"><button class="suggestion_btn" type="button">谢谢</button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="additional_info">
+                        <div class="info_item site">
+                            <img src="/static/img/buy/site.png" alt="site" class="item_img site">
+                            <span class="info_label site_label">购买地址</span>
+                            <div class="site_custom_choice_wrapper">
+                                <label class="site_custom_choice_label"><input type="radio" name="site_custom_choice"
+                                        id="specific_address" value="指定地址" checked>指定地址</label>
+                                <label class="site_custom_choice_label"><input type="radio" name="site_custom_choice"
+                                        id="nearby" value="就近购买">就近购买</label>
+                            </div>
+                        </div>
+                        <div class="info_item site_choice">
+                            <div class="site_choice_wrapper">
+                                <input type="text" name="commAddress" id="buy_address" placeholder="请输入购买地址">
+                            </div>
+                        </div>
+                        <div class="info_item">
+                            <img src="/static/img/buy/item.png" alt="item" class="item_img item">
+                            <label for="estimated_price" class="info_label estimated_price_label">预估商品费</label>
+                            <div class="estimated_price_choice_wrapper">
+                                <input type="number" name="commCostReal" id="estimated_price" min="0" step="0.5"
+                                    required>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <!-- <div class="func">
+                <div class="func_item">
+                    <a href="#" class="link_block">
+                        <img src="/static/img/buy/customer_support.png" alt="customer support" class="item_img">
+                        <span href="#" class="customer_support func_label">客服咨询</span>
+                    </a>
+                </div>
+            </div> -->
+        </div>
+        <div class="action_bar">
+            <div class="counter">
+                <span class="counter_label">待支付:</span>
+                <p class="total"><span class="total_content">20</span>金子</p> <!-- needs attention -->
+            </div>
+            <div class="checkin">
+                <button class="checkin_btn" type="submit">提交订单</button>
+            </div>
+        </div>
+    </main>
+    <script src="/static/js/init_page.js"></script>
+    <script src="script.js"></script>
+    <script src="/static/js/autoComplete.js"></script>
+</body>
+
+</html>

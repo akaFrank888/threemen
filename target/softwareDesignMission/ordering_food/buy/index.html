@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/normalize.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <main>
+        <div class="wrapper">
+            <form method="post">
+                <div class="address_section">
+                    <div class="detail_address">
+                        <div class="name info_item">
+                            <img src="/static/img/buy/name.png" alt="name" class="item_img name">
+                            <label for="name" class="info_label name_label">姓名</label>
+                            <input type="text" name="name" id="name" autocomplete="name">
+                        </div>
+                        <div class="tel info_item">
+                            <img src="/static/img/buy/tel.png" alt="tel" class="item_img tel">
+                            <label for="phone" class="info_label tel_label">手机号</label>
+                            <input type="tel" name="phone" id="phone" autocomplete="tel">
+                        </div>
+                        <div class="address info_item">
+                            <img src="/static/img/buy/address.png" alt="address" class="item_img address">
+                            <label for="address" class="info_label address_label">地址</label>
+                            <input type="text" name="address" id="address" autocomplete="address-line1">
+                        </div>
+                    </div>
+                </div>
+                <div class="additional_info">
+                    <div class="info_item">
+                        <img src="/static/img/buy/site.png" alt="site" class="item_img site">
+                        <span class="info_label site_label">站点</span>
+                        <label class="site_label"><input type="radio" name="site" id="no_20" value="no_20"
+                                checked>北苑20栋</label>
+                        <label class="site_label"><input type="radio" name="site" id="no_18" value="no_18">北苑18栋</label>
+                        <label class="site_label"><input type="radio" name="site" id="express"
+                                value="express">校门邮政</label>
+                        <label class="site_label"><input type="radio" name="site" id="outside"
+                                value="outside">公交站</label>
+                    </div>
+                    <div class="info_item">
+                        <img src="/static/img/buy/item.png" alt="item" class="item_img item">
+                        <span class="info_label size_label">物品大小</span>
+                        <label class="size_label"><input type="radio" name="size" id="small" value="small"
+                                checked>小件</label>
+                        <label class="size_label"><input type="radio" name="size" id="medium" value="medium">中件</label>
+                        <label class="size_label"><input type="radio" name="size" id="large" value="large">大件</label>
+                        <!-- <select name="size" id="size">
+                            <option value="small">小件</option>
+                            <option value="medium">中件</option>
+                            <option value="large">大件</option>
+                        </select> -->
+                    </div>
+                    <div class="info_item">
+                        <img src="/static/img/buy/code.png" alt="code" class="item_img code">
+                        <label for="code" class="info_label code_label">取件码</label>
+                        <input type="text" name="code" id="code" required>
+                    </div>
+                    <div class="info_item">
+                        <img src="/static/img/buy/note.png" alt="note" class="item_img note">
+                        <label for="note" class="info_label note_label">备注</label>
+                        <input type="text" name="note" id="note">
+                    </div>
+                </div>
+                <div class="func">
+                    <div class="func_item">
+                        <a href="#" class="link_block">
+                            <img src="/static/img/buy/customer_support.png" alt="customer support" class="item_img">
+                            <span href="#" class="customer_support func_label">客服咨询</span>
+                        </a>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="action_bar">
+            <div class="counter">
+                <span class="counter_label">待支付:</span>
+                <p class="total">666金子</p>
+            </div>
+            <div class="checkin">
+                <button class="checkin_btn">提交订单</button>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+    <script src="/static/js/account.js"></script>
+</body>
+
+</html>

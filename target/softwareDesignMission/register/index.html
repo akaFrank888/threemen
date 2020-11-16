@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>注册</title>
+    <link rel="stylesheet" href="/static/css/normalize.css">
+    <link rel="stylesheet" href="register.css">
+    <link rel="stylesheet" href="register_dynamic.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <a href="/" class="logo">
+            <img class="logo_img" src="/static/img/three_men_transparent.png" alt="Three men">
+        </a>
+        <div class="card">
+            <div class="register_panel">
+                <h1 class="page_title">欢迎注册平台</h1>
+                <h2 class="page_second_title">每一天，乐在服务。</h2>
+                <form method="POST" class="form">
+                    <label for="account" class="account_label label">
+                        <input class="account_input input" type="text" name="account" id="account"
+                            autocomplete="username" required>
+                        <div class="inline_text">
+                            <img src="/static/img/login_register_shared/username.png" alt="username" class="text_icon">
+                            账号
+                        </div>
+                    </label>
+                    <label for="password" class="password_label label">
+                        <input class="password_input input" type="password" name="password" id="password"
+                            autocomplete="new-password"
+                            pattern="^(^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&-+=()])(?=\\S+$).{8, 20})$)$"
+                            title="密码需满足8-20位，且包含大写字母、小写字母以及数字。" required>
+                        <div class="inline_text">
+                            <img src="/static/img/login_register_shared/password.png" alt="password" class="text_icon">
+                            密码
+                        </div>
+                    </label>
+                    <label for="nickname" class="nickname_label label">
+                        <input class="nickname_input input" type="text" name="nickname" id="nickname"
+                            autocomplete="nickname" required>
+                        <div class="inline_text">
+                            <img src="/static/img/login_register_shared/nickname.png" alt="nickname" class="text_icon">
+                            昵称
+                        </div>
+                    </label>
+                    <label for="email" class="email_label label">
+                        <input class="email_input input" type="email" name="email" id="email" autocomplete="email"
+                            required>
+                        <div class="inline_text">
+                            <img src="/static/img/login_register_shared/email.png" alt="email" class="text_icon">
+                            邮箱
+                        </div>
+                    </label>
+                    <label for="securityCode" class="securityCode_label label">
+                        <input maxlength="6" class="securityCode_input input" type="text" name="securityCode"
+                            id="securityCode" autocomplete="off" required>
+                        <div class="inline_text">
+                            <img src="/static/img/login_register_shared/verification_code.png" alt="verification_code"
+                                class="text_icon">
+                            验证码
+                        </div>
+                        <img src="#" alt="Code" class="securityCode_img">
+                    </label>
+                    <button type="submit" class="submit_btn">立即注册</button>
+                </form>
+                <a href="/login" class="login_link">登陆账号</a>
+            </div>
+            <div class="slider_wrapper">
+                <div class="side_slider">
+                    <ul class="side_slider">
+                        <li class="slider_item"><img src="/static/img/login_register_shared/0.jpg" alt="0"
+                                class="slider_img"></li>
+                        <li class="slider_item"><img src="/static/img/login_register_shared/1.jpg" alt="1"
+                                class="slider_img"></li>
+                        <li class="slider_item"><img src="/static/img/login_register_shared/2.jpg" alt="2"
+                                class="slider_img"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <script src="/static/js/slider.js"></script>
+        <script src="register.js"></script>
+</body>
+
+</html>

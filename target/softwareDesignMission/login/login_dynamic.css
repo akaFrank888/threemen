@@ -1,0 +1,68 @@
+@media (max-width: 1600px) {
+    .card {
+        top: 5%;
+        max-width: 1300px;
+    }
+    
+    .login_panel {
+        padding: 64px 80px;
+    }
+}
+
+@media (max-width: 1300px) {
+    .card {
+        max-width: 1000px;
+    }
+
+    .login_panel {
+        padding: 54px 72px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .card {
+        max-width: 800px;
+        font-size: 14px;
+    }
+
+    .login_panel {
+        width: 65%;
+        padding: 24px 54px;
+    }
+
+    .slider_wrapper {
+        width: 35%;
+    }
+}
+
+@media (max-width: 800px) {
+    .card {
+        max-width: 480px;
+        font-size: 12px;
+    }
+
+    .login_panel {
+        padding: 18px 40px;
+        width: 100%;
+    }
+
+    .slider_wrapper {
+        width: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        max-width: 320px;
+        font-size: 8px;
+    }
+
+    .login_panel {
+        padding: 12px 20px;
+        width: 100%;
+    }
+
+    .slider_wrapper {
+        display: none;
+    }
+}
